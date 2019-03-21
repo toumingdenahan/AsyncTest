@@ -24,8 +24,8 @@ public class AsyncTaskController {
         long currentTimeMillis = System.currentTimeMillis();
     
         List< Future<String>> futures = new ArrayList<Future<String>>();
-        for (int i = 0; i <3;i++) {
-            Future<String> task = asyncTask.task1();
+        for (int i = 0; i <100;i++) {
+            Future<String> task = asyncTask.task1(i);
             futures.add(task);
         }
         
@@ -55,7 +55,7 @@ public class AsyncTaskController {
                 e.printStackTrace();
             }
         }
-        
+        System.out.println("ceshi hahaha");
         return result;
         
         

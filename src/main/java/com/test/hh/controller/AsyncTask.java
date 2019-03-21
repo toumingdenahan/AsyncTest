@@ -13,11 +13,11 @@ import java.util.concurrent.Future;
 public class AsyncTask {
     
     @Async
-    public Future<String> task1() throws InterruptedException{
+    public Future<String> task1(int i) throws InterruptedException{
         long currentTimeMillis = System.currentTimeMillis();
         Thread.sleep(1000);
         long currentTimeMillis1 = System.currentTimeMillis();
-        System.out.println("task1任务耗时:"+(currentTimeMillis1-currentTimeMillis)+"ms");
+        System.out.println("task1任务耗时:"+(currentTimeMillis1-currentTimeMillis)+"ms"+",and "+i);
         return new AsyncResult<String>("task1执行完毕");
     }
     
