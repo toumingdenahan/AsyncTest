@@ -55,7 +55,7 @@ public class AsyncTaskController {
                 e.printStackTrace();
             }
         }
-        System.out.println("ceshi hahaha is test2 okok");
+        System.out.println("ceshi hahaha");
         return result;
         
         
